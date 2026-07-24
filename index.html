@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Forecast App</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="container">
+
+        <h1 class="header__title">
+
+            🌤 Weather Forecast App
+
+        </h1>
+
+        <p class="header__subtitle">
+
+            Search any city to view the current weather and 5-day forecast.
+
+        </p>
+
+    </div>
+
+</header>
+
+<!-- ================= SEARCH ================= -->
+
+<section class="search">
+
+    <div class="container">
+
+        <form id="searchForm"
+              class="search__form">
+
+            <label for="cityInput"
+                   class="visually-hidden">
+
+                Enter City Name
+
+            </label>
+
+            <input
+                type="text"
+                id="cityInput"
+                class="search__input"
+                placeholder="Enter city name..."
+                autocomplete="off"
+                required>
+
+            <button
+                type="submit"
+                class="button">
+
+                Search
+
+            </button>
+
+            <button
+                type="button"
+                id="locationBtn"
+                class="button button--secondary">
+
+                📍 My Location
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- ================= LOADER ================= -->
+
+<section id="loader"
+         class="loader hidden"
+         aria-live="polite">
+
+    <div class="loader__spinner"></div>
+
+    <p>
+
+        Loading weather...
+
+    </p>
+
+</section>
+
+<!-- ================= ERROR ================= -->
+
+<section id="errorMessage"
+         class="error hidden"
+         aria-live="assertive">
+
+</section>
+
+<!-- ================= CURRENT WEATHER ================= -->
+
+<section id="weatherCard"
+         class="weather hidden">
+
+    <div class="container">
+
+        <div class="weather__card">
+
+            <h2 id="cityName">
+
+                City Name
+
+            </h2>
+
+            <img
+                id="weatherIcon"
+                src=""
+                alt="Weather Icon">
+
+            <h3 id="temperature">
+
+                -- °C
+
+            </h3>
+
+            <p id="description">
+
+                Weather Description
+
+            </p>
+
+            <div class="weather__details">
+
+                <div>
+
+                    💧 Humidity
+
+                    <span id="humidity">
+
+                        --
+
+                    </span>%
+
+                </div>
+
+                <div>
+
+                    🌬 Wind
+
+                    <span id="windSpeed">
+
+                        --
+
+                    </span> m/s
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FORECAST ================= -->
+
+<section class="forecast">
+
+    <div class="container">
+
+        <h2>
+
+            5-Day Forecast
+
+        </h2>
+
+        <div id="forecastContainer"
+             class="forecast__grid">
+
+            <!-- Forecast Cards Added Here -->
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <p>
+
+            © 2026 Weather Forecast App
+
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="js/storage.js"></script>
+
+<script src="js/api.js"></script>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
+
+
+
